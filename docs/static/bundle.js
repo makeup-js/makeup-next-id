@@ -593,16 +593,21 @@ https://github.com/joyent/node/blob/master/lib/module.js
 
 $_mod.def("/makeup-next-id$0.0.1/index", function(require, exports, module, __filename, __dirname) { 'use strict';
 
-var nextInSequenceMap = {};
+var sequenceMap = {};
 var defaultPrefix = 'nid';
 
 module.exports = function (el) {
     var prefix = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultPrefix;
 
-    // initialise prefix in sequence map if necessary
-    nextInSequenceMap[prefix] = nextInSequenceMap[prefix] || 0;
+    // prevent empty string
+    var _prefix = prefix === '' ? defaultPrefix : prefix;
 
-    el.setAttribute('id', prefix + '-' + nextInSequenceMap[prefix]++);
+    // initialise prefix in sequence map if necessary
+    sequenceMap[_prefix] = sequenceMap[_prefix] || 0;
+
+    if (!el.id) {
+        el.setAttribute('id', _prefix + '-' + sequenceMap[_prefix]++);
+    }
 };
 
 });
