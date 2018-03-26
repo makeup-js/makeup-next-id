@@ -591,7 +591,7 @@ https://github.com/joyent/node/blob/master/lib/module.js
     }
 })();
 
-$_mod.def("/makeup-next-id$0.0.1/index", function(require, exports, module, __filename, __dirname) { 'use strict';
+$_mod.def("/makeup-next-id$0.0.2/index", function(require, exports, module, __filename, __dirname) { 'use strict';
 
 var sequenceMap = {};
 var defaultPrefix = 'nid';
@@ -611,7 +611,7 @@ module.exports = function (el) {
 };
 
 });
-$_mod.def("/makeup-next-id$0.0.1/docs/index", function(require, exports, module, __filename, __dirname) { var nextId = require('/makeup-next-id$0.0.1/index'/*'../index.js'*/);
+$_mod.def("/makeup-next-id$0.0.2/docs/index", function(require, exports, module, __filename, __dirname) { var nextId = require('/makeup-next-id$0.0.2/index'/*'../index.js'*/);
 
 var listEl = document.getElementById('list');
 var testForm = document.getElementById('testForm');
@@ -626,4 +626,4 @@ testForm.addEventListener('submit', function(e) {
 });
 
 });
-$_mod.run("/makeup-next-id$0.0.1/docs/index");
+$_mod.run("/makeup-next-id$0.0.2/docs/index");
