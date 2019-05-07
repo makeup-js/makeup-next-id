@@ -597,32 +597,34 @@ var sequenceMap = {};
 var defaultPrefix = 'nid';
 
 module.exports = function (el) {
-    var prefix = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultPrefix;
+  var prefix = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultPrefix;
 
-    // prevent empty string
-    var _prefix = prefix === '' ? defaultPrefix : prefix;
+  // prevent empty string
+  var _prefix = prefix === '' ? defaultPrefix : prefix; // initialise prefix in sequence map if necessary
 
-    // initialise prefix in sequence map if necessary
-    sequenceMap[_prefix] = sequenceMap[_prefix] || 0;
 
-    if (!el.id) {
-        el.setAttribute('id', _prefix + '-' + sequenceMap[_prefix]++);
-    }
+  sequenceMap[_prefix] = sequenceMap[_prefix] || 0;
+
+  if (!el.id) {
+    el.setAttribute('id', "".concat(_prefix, "-").concat(sequenceMap[_prefix]++));
+  }
 };
 
 });
-$_mod.def("/makeup-next-id$0.0.2/docs/index", function(require, exports, module, __filename, __dirname) { var nextId = require('/makeup-next-id$0.0.2/index'/*'../index.js'*/);
+$_mod.def("/makeup-next-id$0.0.2/docs/index", function(require, exports, module, __filename, __dirname) { "use strict";
+
+/* eslint-disable no-console */
+var nextId = require('/makeup-next-id$0.0.2/index'/*'../index.js'*/);
 
 var listEl = document.getElementById('list');
 var testForm = document.getElementById('testForm');
 var inputEl = document.getElementById('prefix');
-
-testForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    var listItem = document.createElement('li');
-    listItem.innerText = 'Item ' + (listEl.childNodes.length - 1);
-    nextId(listItem, inputEl.value);
-    listEl.appendChild(listItem);
+testForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+  var listItem = document.createElement('li');
+  listItem.innerText = "Item ".concat(listEl.childNodes.length - 1);
+  nextId(listItem, inputEl.value);
+  listEl.appendChild(listItem);
 });
 
 });
