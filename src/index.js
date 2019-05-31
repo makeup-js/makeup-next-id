@@ -1,16 +1,20 @@
 'use strict';
 
+const nanoid = require('nanoid');
 const sequenceMap = {};
 const defaultPrefix = 'nid';
+const randomPortion = nanoid(3);
 
 module.exports = function(el, prefix = defaultPrefix) {
-    // prevent empty string
-    const _prefix = (prefix === '') ? defaultPrefix : prefix;
+    // join first prefix with random portion to create key
+    const key = `${prefix}${randomPortion}`;
 
-    // initialise prefix in sequence map if necessary
-    sequenceMap[_prefix] = sequenceMap[_prefix] || 0;
+    // initialise key in sequence map if necessary
+    sequenceMap[key] = sequenceMap[key] || 0;
 
     if (!el.id) {
-        el.setAttribute('id', `${_prefix}-${sequenceMap[_prefix]++}`);
+        el.setAttribute('id', `${key}-${sequenceMap[key]++}`);
     }
+
+    return el.id;
 };

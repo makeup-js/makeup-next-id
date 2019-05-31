@@ -9,6 +9,18 @@
       ]
     },
     {
+      "name": "nanoid",
+      "dependencies": [
+        "require: nanoid"
+      ]
+    },
+    {
+      "name": "process",
+      "dependencies": [
+        "require: process"
+      ]
+    },
+    {
       "name": "bundle-module",
       "dependencies": [
         "require: ../index.js"

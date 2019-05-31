@@ -30,6 +30,9 @@
     "accessibility",
     "a11y"
   ],
+  "dependencies" : {
+    "nanoid": "^2"  
+  },
   "devDependencies": {
     "@babel/cli": "^7",
     "@babel/core": "^7",
