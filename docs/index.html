@@ -1,26 +1,21 @@
 <html !doctype>
-<head>
-    <title>Demo: makeup-next-id</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <style>
+    <head>
+        <title>Demo: makeup-next-id</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    </head>
+    <body>
+        <main role="main">
+            <h1>makeup-next-id</h1>
+            <p>Click button to append a new list item with generated id. Check console for output.</p>
 
-    </style>
-</head>
-<body>
-    <main role="main">
-        <h1>makeup-next-id</h1>
+            <ul id="list"></ul>
 
-        <ul id="list">
-            <li id="sas-0">Item 1</li>
-        </ul>
-
-        <form id="testForm">
-            <label>Prefix</label><input type="text" id="prefix"/>
-            <button id="appender">Append new item</button>
-        </form>
-    </main>
-
-</body>
-<!-- <lasso-body> --><script src="./static/bundle.js"></script>
+            <form id="testForm">
+                <label>Prefix</label><input type="text" id="prefix" value="nid-"/>
+                <button id="appender">Append new item</button>
+            </form>
+        </main>
+    </body>
+    <!-- <lasso-body> --><script src="./static/bundle.js"></script>
 <script>$_mod.ready();</script><!-- </lasso-body> -->
 </html>

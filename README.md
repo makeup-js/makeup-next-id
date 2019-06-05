@@ -7,7 +7,7 @@
     <a href="https://david-dm.org/makeup-js/makeup-next-id#info=devDependencies"><img src="https://david-dm.org/makeup-js/makeup-next-id/dev-status.svg" alt="devDependency status" /></a>
 </p>
 
-Assigns the next id in sequence to an element, if an id property does not already exist.
+Assigns the next id in sequence to an element, if an id property does not already exist. The id will consist of a configurable prefix (default: 'nid-'), followed by three randomly generated chars, then a number in sequence. If you need a <em>known</em> id, ahead of time, please use a different approach!
 
 A vanilla JavaScript port of <a href="https://github.com/ianmcburnie/jquery-next-id">jquery-next-id</a>.
 
@@ -36,7 +36,7 @@ const widgets = document.querySelectorAll('.widget');
 
 // assign next id to each element
 widgets.forEach(function(el) {
-    nextId(el, 'widget');
+    nextId(el);
 });
 ```
 
@@ -51,16 +51,12 @@ Markup before:
 Markup after:
 
 ```html
-<div class="widget" id="widget-1"></div>
-<div class="widget" id="widget-2"></div>
-<div class="widget" id="widget-3"></div>
+<div class="widget" id="nid-tCa-1"></div>
+<div class="widget" id="nid-tCa-2"></div>
+<div class="widget" id="nid-tCa-3"></div>
 ```
 
 ## Custom Events        
-
-* None
-
-## Dependencies
 
 * None
 
