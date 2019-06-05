@@ -1,5 +1,5 @@
-$_mod.installed("makeup-next-id$0.1.0", "nanoid", "2.0.3");
-$_mod.def("/makeup-next-id$0.1.0/index", function(require, exports, module, __filename, __dirname) { 'use strict';
+$_mod.installed("makeup-next-id$0.1.1", "nanoid", "2.0.3");
+$_mod.def("/makeup-next-id$0.1.1/index", function(require, exports, module, __filename, __dirname) { 'use strict';
 
 var nanoid = require('/nanoid$2.0.3/index.browser'/*'nanoid'*/);
 

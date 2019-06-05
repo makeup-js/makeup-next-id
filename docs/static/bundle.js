@@ -591,7 +591,7 @@ https://github.com/joyent/node/blob/master/lib/module.js
     }
 })();
 
-$_mod.installed("makeup-next-id$0.1.0", "nanoid", "2.0.3");
+$_mod.installed("makeup-next-id$0.1.1", "nanoid", "2.0.3");
 $_mod.main("/nanoid$2.0.3", "");
 $_mod.remap("/nanoid$2.0.3/index", "/nanoid$2.0.3/index.browser");
 $_mod.builtin("process", "/process$0.11.10/browser");
@@ -809,7 +809,7 @@ module.exports = function (size) {
 }
 
 });
-$_mod.def("/makeup-next-id$0.1.0/index", function(require, exports, module, __filename, __dirname) { 'use strict';
+$_mod.def("/makeup-next-id$0.1.1/index", function(require, exports, module, __filename, __dirname) { 'use strict';
 
 var nanoid = require('/nanoid$2.0.3/index.browser'/*'nanoid'*/);
 
@@ -833,10 +833,10 @@ module.exports = function (el) {
 };
 
 });
-$_mod.def("/makeup-next-id$0.1.0/docs/index", function(require, exports, module, __filename, __dirname) { "use strict";
+$_mod.def("/makeup-next-id$0.1.1/docs/index", function(require, exports, module, __filename, __dirname) { "use strict";
 
 /* eslint-disable no-console */
-var nextId = require('/makeup-next-id$0.1.0/index'/*'../index.js'*/);
+var nextId = require('/makeup-next-id$0.1.1/index'/*'../index.js'*/);
 
 var listEl = document.getElementById('list');
 var testForm = document.getElementById('testForm');
@@ -851,4 +851,4 @@ testForm.addEventListener('submit', function (e) {
 });
 
 });
-$_mod.run("/makeup-next-id$0.1.0/docs/index");
+$_mod.run("/makeup-next-id$0.1.1/docs/index");
