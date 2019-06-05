@@ -9,7 +9,8 @@ const inputEl = document.getElementById('prefix');
 testForm.addEventListener('submit', function(e) {
     e.preventDefault();
     const listItem = document.createElement('li');
-    listItem.innerText = `Item ${listEl.childNodes.length}`;
-    console.log(`id: ${nextId(listItem, inputEl.value)}`);
+    const id = nextId(listItem, inputEl.value);
+    listItem.innerText = `Item ${listEl.childNodes.length} (${id})`;
+    console.log(`id: ${id}`);
     listEl.appendChild(listItem);
 });

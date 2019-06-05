@@ -30,8 +30,8 @@
     "accessibility",
     "a11y"
   ],
-  "dependencies" : {
-    "nanoid": "^2"  
+  "dependencies": {
+    "nanoid": "^2"
   },
   "devDependencies": {
     "@babel/cli": "^7",
@@ -50,7 +50,7 @@
     "karma-html-reporter": "~0.2",
     "karma-jasmine": "^2",
     "lasso-cli": "^2",
-    "onchange": "^5",
+    "onchange": "^6",
     "parallelshell": "^3",
     "puppeteer": "^1",
     "rimraf": "^2"
