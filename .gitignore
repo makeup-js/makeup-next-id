@@ -12,7 +12,7 @@ lint.txt
 # Lasso docs temp files
 .cache
 build
-docs/index.js
+docs/_babel
 
 # Lasso tests temp files
 test/static/bundle-test.js
