@@ -1,6 +1,9 @@
-var nextId = require('../index.js');
-var containerEl = document.createElement('div');
-var testEls;
+/* eslint-env jest */
+
+import nextId from './src/index.js';
+
+const containerEl = document.createElement('div');
+let testEls;
 
 function nodeListToArray(nodeList) {
     return Array.prototype.slice.call(nodeList);
@@ -8,11 +11,11 @@ function nodeListToArray(nodeList) {
 
 document.body.appendChild(containerEl);
 
-describe('given three elements without an existing id', function() {
-    describe('when nextId is called on each element in sequence', function() {
-        var nids = [];
+describe('given three elements without an existing id', () => {
+    describe('when nextId is called on each element in sequence', () => {
+        const nids = [];
 
-        beforeAll(function() {
+        beforeAll(() => {
             containerEl.innerHTML = '<div></div><div></div><div></div>';
             testEls = nodeListToArray(containerEl.querySelectorAll('div'));
 
@@ -21,23 +24,23 @@ describe('given three elements without an existing id', function() {
             nids.push(nextId(testEls[2]));
         });
 
-        it('then first el should have id={id}'.replace('{id}', nids[0]), function() {
+        it('then first el should have id={id}'.replace('{id}', nids[0]), () => {
             expect(testEls[0].id).toEqual(nids[0]);
         });
 
-        it('then second el should have id={id}'.replace('{id}', nids[1]), function() {
+        it('then second el should have id={id}'.replace('{id}', nids[1]), () => {
             expect(testEls[1].id).toEqual(nids[1]);
         });
 
-        it('then third el id should have id={id}'.replace('{id}', nids[2]), function() {
+        it('then third el id should have id={id}'.replace('{id}', nids[2]), () => {
             expect(testEls[2].id).toEqual(nids[2]);
         });
     });
 
-    describe('when nextId is called on each element in sequence using custom prefix', function() {
-        var nids = [];
+    describe('when nextId is called on each element in sequence using custom prefix', () => {
+        const nids = [];
 
-        beforeAll(function() {
+        beforeAll(() => {
             containerEl.innerHTML = '<div></div><div></div><div></div>';
             testEls = nodeListToArray(containerEl.querySelectorAll('div'));
 
@@ -46,23 +49,23 @@ describe('given three elements without an existing id', function() {
             nids.push(nextId(testEls[2], 'foo-'));
         });
 
-        it('then first el should have id={id}'.replace('{id}', nids[0]), function() {
+        it('then first el should have id={id}'.replace('{id}', nids[0]), () => {
             expect(testEls[0].id).toEqual(nids[0]);
         });
 
-        it('then second el should have id={id}'.replace('{id}', nids[1]), function() {
+        it('then second el should have id={id}'.replace('{id}', nids[1]), () => {
             expect(testEls[1].id).toEqual(nids[1]);
         });
 
-        it('then third el id should have id={id}'.replace('{id}', nids[2]), function() {
+        it('then third el id should have id={id}'.replace('{id}', nids[2]), () => {
             expect(testEls[2].id).toEqual(nids[2]);
         });
     });
 });
 
-describe('given three elements with an existing id', function() {
-    describe('when nextId is called on each element in sequence', function() {
-        beforeAll(function() {
+describe('given three elements with an existing id', () => {
+    describe('when nextId is called on each element in sequence', () => {
+        beforeAll(() => {
             containerEl.innerHTML = '<div id="foo-0"></div><div id="foo-1"></div><div id="foo-2"></div>';
             testEls = nodeListToArray(containerEl.querySelectorAll('div'));
 
@@ -71,21 +74,21 @@ describe('given three elements with an existing id', function() {
             nextId(testEls[2]);
         });
 
-        it('should maintain id=foo-0 on first element', function() {
+        it('should maintain id=foo-0 on first element', () => {
             expect(testEls[0].id).toEqual('foo-0');
         });
 
-        it('should maintain id=foo-1 on second element', function() {
+        it('should maintain id=foo-1 on second element', () => {
             expect(testEls[1].id).toEqual('foo-1');
         });
 
-        it('should maintain id=foo-2 on third element', function() {
+        it('should maintain id=foo-2 on third element', () => {
             expect(testEls[2].id).toEqual('foo-2');
         });
     });
 
-    describe('when nextId is called on each element in sequence using custom prefix', function() {
-        beforeAll(function() {
+    describe('when nextId is called on each element in sequence using custom prefix', () => {
+        beforeAll(() => {
             containerEl.innerHTML = '<div id="foo-0"></div><div id="foo-1"></div><div id="foo-2"></div>';
             testEls = nodeListToArray(containerEl.querySelectorAll('div'));
 
@@ -94,15 +97,15 @@ describe('given three elements with an existing id', function() {
             nextId(testEls[2]);
         });
 
-        it('should maintain id=foo-0 on first element', function() {
+        it('should maintain id=foo-0 on first element', () => {
             expect(testEls[0].id).toEqual('foo-0');
         });
 
-        it('should maintain id=foo-1 on second element', function() {
+        it('should maintain id=foo-1 on second element', () => {
             expect(testEls[1].id).toEqual('foo-1');
         });
 
-        it('should maintain id=foo-2 on third element', function() {
+        it('should maintain id=foo-2 on third element', () => {
             expect(testEls[2].id).toEqual('foo-2');
         });
     });

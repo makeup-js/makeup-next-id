@@ -5,8 +5,5 @@
   },
   "env": {
     "browser": true
-  },
-  "rules": {
-    "prefer-arrow-callback": 0
   }
 }

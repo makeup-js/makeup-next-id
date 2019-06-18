@@ -6,7 +6,7 @@ const listEl = document.getElementById('list');
 const testForm = document.getElementById('testForm');
 const inputEl = document.getElementById('prefix');
 
-testForm.addEventListener('submit', function(e) {
+testForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const listItem = document.createElement('li');
     const id = nextId(listItem, inputEl.value);

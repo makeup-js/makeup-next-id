@@ -64,21 +64,9 @@ Markup after:
 
 * None
 
-## Development
+## Code Coverage
 
-* `npm start`
-* `npm test`
-* `npm run lint`
-* `npm run fix`
-* `npm run build`
-* `npm run clean`
-
-## Test Reports
-
-Each test run will generate the following reports:
-
-* `/reports/coverage` contains Istanbul code coverage report
-* `/reports/html` contains HTML test report
+Running `yarn test` will generate a code coverage at `./coverage`/
 
 ## CI Build
 
