@@ -648,6 +648,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@ebay/browserslist-config@^1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@ebay/browserslist-config/-/browserslist-config-1.0.1.tgz#deccafb04101fa52507b8f2204161c8ed5e70375"
+  integrity sha512-5i4XOsKwoCYomZ9cF7H5OBroeHoYUriylg55mJwTARMbQVv21RnYKF/Bwi86ZlHz4S6YepxlaQorsxR6T2xv6w==
+
 "@jest/console@^24.7.1":
   version "24.7.1"
   resolved "https://registry.yarnpkg.com/@jest/console/-/console-24.7.1.tgz#32a9e42535a97aedfe037e725bd67e954b459545"
@@ -1279,7 +1284,7 @@ axios@0.19.0:
     follow-redirects "1.5.10"
     is-buffer "^2.0.2"
 
-babel-jest@^24.8.0:
+babel-jest@^24, babel-jest@^24.8.0:
   version "24.8.0"
   resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-24.8.0.tgz#5c15ff2b28e20b0f45df43fe6b7f2aae93dba589"
   integrity sha512-+5/kaZt4I9efoXzPlZASyK/lN9qdRKmmUav9smVc0ruPQD7IsfucQ87gpOE8mn2jbDuS6M/YOW6n3v9ZoIfgnw==

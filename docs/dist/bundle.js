@@ -93,7 +93,7 @@
 
 var _index = _interopRequireDefault(__webpack_require__(1));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 /* eslint-disable no-console */
 var listEl = document.getElementById('list');
@@ -102,7 +102,7 @@ var inputEl = document.getElementById('prefix');
 testForm.addEventListener('submit', function (e) {
   e.preventDefault();
   var listItem = document.createElement('li');
-  var id = (0, _index.default)(listItem, inputEl.value);
+  var id = (0, _index["default"])(listItem, inputEl.value);
   listItem.innerText = "Item ".concat(listEl.childNodes.length, " (").concat(id, ")");
   console.log("id: ".concat(id));
   listEl.appendChild(listItem);
