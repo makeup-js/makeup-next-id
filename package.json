@@ -40,7 +40,6 @@
     "@babel/preset-env": "^7",
     "@ebay/browserslist-config": "^1",
     "babel-jest": "^24",
-    "babel-plugin-transform-object-assign": "^6",
     "browser-sync": "^2",
     "core-js-pure": "^3",
     "coveralls": "^3",
