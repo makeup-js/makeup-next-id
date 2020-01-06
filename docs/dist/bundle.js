@@ -140,38 +140,33 @@ module.exports = function (el) {
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-if (true) {
-  if (typeof navigator !== 'undefined' && navigator.product === 'ReactNative') {
-    throw new Error(
-      'React Native does not have a built-in secure random generator. ' +
-      'If you don’t need unpredictable IDs, you can use `nanoid/non-secure`. ' +
-      'For secure ID install `expo-random` locally and use `nanoid/async`.'
-    )
-  }
-  if (typeof self === 'undefined' || (!self.crypto && !self.msCrypto)) {
-    throw new Error(
-      'Your browser does not have secure random generator. ' +
-      'If you don’t need unpredictable IDs, you can use nanoid/non-secure.'
-    )
-  }
-}
+var url = 'bjectSymhasOwnProp-0123456789ABCDEFGHIJKLMNQRTUVWXYZ_dfgiklquvxz'
 
-var crypto = self.crypto || self.msCrypto
-
-/*
- * This alphabet uses a-z A-Z 0-9 _- symbols.
- * Symbols order was changed for better gzip compression.
+/**
+ * Generate URL-friendly unique ID. This method use non-secure predictable
+ * random generator.
+ *
+ * By default, ID will have 21 symbols to have a collision probability similar
+ * to UUID v4.
+ *
+ * @param {number} [size=21] The number of symbols in ID.
+ *
+ * @return {string} Random string.
+ *
+ * @example
+ * const nanoid = require('nanoid/non-secure')
+ * model.id = nanoid() //=> "Uakgb_J5m9g-0JDMbcJqL"
+ *
+ * @name nonSecure
+ * @function
  */
-var url = 'Uint8ArdomValuesObj012345679BCDEFGHIJKLMNPQRSTWXYZ_cfghkpqvwxyz-'
-
 module.exports = function (size) {
   size = size || 21
   var id = ''
-  var bytes = crypto.getRandomValues(new Uint8Array(size))
   while (0 < size--) {
-    id += url[bytes[size] & 63]
+    id += url[Math.random() * 64 | 0]
   }
   return id
 }

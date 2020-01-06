@@ -1,6 +1,6 @@
 'use strict';
 
-var nanoid = require('nanoid');
+var nanoid = require('nanoid/non-secure');
 
 var sequenceMap = {};
 var defaultPrefix = 'nid';

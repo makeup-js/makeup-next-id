@@ -1,6 +1,6 @@
 'use strict';
 
-const nanoid = require('nanoid');
+const nanoid = require('nanoid/non-secure');
 const sequenceMap = {};
 const defaultPrefix = 'nid';
 const randomPortion = nanoid(3);
