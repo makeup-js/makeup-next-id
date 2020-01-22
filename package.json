@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run build && parallelshell \"npm run server\" \"npm run watch\"",
-    "test": "npm run build:module && jest",
+    "test": "npm run build:module && npm run jest",
     "prepublishOnly": "npm run lint && npm run test && npm run build:docs",
     "prep": "npm run prepublishOnly",
     "build": "npm run build:module && npm run build:docs",
