@@ -13,7 +13,7 @@ A vanilla JavaScript port of <a href="https://github.com/ianmcburnie/jquery-next
 
 ## Experimental
 
-This module is still in an experimental state, until it reaches v1.0.0 you must consider all minor releases as breaking changes. Patch releases may introduce new features, but will be backwards compatible.
+This CommonJS module is still in an experimental state, until it reaches v1.0.0 you must consider all minor releases as breaking changes. Patch releases may introduce new features, but will be backwards compatible.
 
 ## Install
 
@@ -60,13 +60,13 @@ Markup after:
 
 * None
 
+## Dependencies
+
+* [nanoid](https://www.npmjs.com/package/nanoid)
+
 ## Polyfills
 
 * None
-
-## Code Coverage
-
-Running `yarn test` will generate a code coverage at `./coverage`/
 
 ## CI Build
 
