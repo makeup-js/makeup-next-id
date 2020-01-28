@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-import nextId from './src/index.js';
+import nextId from '../src/index.js';
 
 const containerEl = document.createElement('div');
 let testEls;

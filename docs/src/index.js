@@ -1,6 +1,4 @@
-/* eslint-disable no-console */
-
-import nextId from '../../index.js';
+import nextId from '../../src/index.js';
 
 const listEl = document.getElementById('list');
 const testForm = document.getElementById('testForm');

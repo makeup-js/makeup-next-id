@@ -1,3 +1,5 @@
+.DS_Store
+
 # Logs
 logs
 *.log
@@ -9,10 +11,8 @@ node_modules
 # Lint output
 lint.txt
 
-# Lasso docs temp files
-.cache
-build
-docs/_babel
+# Docs temp files
+docs/transpiled
 
-# Code Coverage Reports
+# Unit Test & Code Coverage Reports
 coverage

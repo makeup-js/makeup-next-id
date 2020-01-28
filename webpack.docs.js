@@ -1,10 +1,13 @@
 const path = require('path');
 
 module.exports = {
-    entry: './docs/_babel/index.js',
-    mode: 'none',
+    entry: './docs/transpiled/index.js',
+    mode: 'production',
+    optimization: {
+        minimize: true
+    },
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, './docs/dist')
+        filename: 'docs.min.js',
+        path: path.resolve(__dirname, './docs/bundled')
     }
 };
